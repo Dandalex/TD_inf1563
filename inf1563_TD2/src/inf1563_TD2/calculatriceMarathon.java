@@ -1,6 +1,6 @@
 package inf1563_TD2;
 
-public class TD1_3 {
+public class calculatriceMarathon {
 public static void main(String[] args) {
 		
 		int largeur_m, largeur_cm, heure_de_debut, minutes_de_debut

@@ -6,7 +6,7 @@ public class Hotel {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// TODO Auto-generated method stub
+		
 				 // créer l'objet Scanner
 			    Scanner clavier = new Scanner(System.in);
 			    

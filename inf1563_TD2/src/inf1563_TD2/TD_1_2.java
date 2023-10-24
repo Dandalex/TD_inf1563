@@ -3,21 +3,21 @@ package inf1563_TD2;
 public class TD_1_2 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int dt, jts, sta, dpj, dps, dpa;
-		double ce, pe, cea, coutan;
+		int distanceTravail, jourDeTravailParSemaine, semainesDeTravailAnnuel, distanceParJour, distanceParSemaine, distanceParAnnee;
+		double consommationEssence, prixEssence, consommationEssenceAnnuel, coutEssenceAnnuel;
 		
-		dt = 12;
-		jts = 4;
-		sta = 48;
-		ce = 0.08;
-		pe = 1.20;
+		distanceTravail = 12;
+		jourDeTravailParSemaine = 4;
+		semainesDeTravailAnnuel = 48;
+		consommationEssence = 0.08;
+		prixEssence = 1.20;
 		
-		dpj = dt * 2;
-		dps = dpj * jts;
-		dpa = dps * sta;
-		cea = dpa * ce;
-		coutan = cea * pe;
+		distanceParJour = distanceTravail * 2;
+		distanceParSemaine = distanceParJour * jourDeTravailParSemaine;
+		distanceParAnnee = distanceParSemaine * semainesDeTravailAnnuel;
+		consommationEssenceAnnuel = distanceParAnnee * consommationEssence;
+		coutEssenceAnnuel = consommationEssenceAnnuel * prixEssence;
 		
-		System.out.println("Cout annuel prévu : $" + coutan  + " par année");
+		System.out.println("Cout annuel prévu : $" + coutEssenceAnnuel  + " par année");
 	}
 }

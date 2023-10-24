@@ -6,9 +6,7 @@ import java.util.Scanner;
 public class Casino {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
-		// TODO Auto-generated method stub
 				// pour exécuter seulement le code d'un des deux exercices, commenter 
 			    // la ligne correspondant à l'autre.
 				 //exercice1();

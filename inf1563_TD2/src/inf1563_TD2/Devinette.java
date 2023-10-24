@@ -4,7 +4,6 @@ import java.util.Random;
 public class Devinette {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		 Scanner scan = new Scanner(System.in);
 		    Random rand = new Random(); 
 		    System.out.println("==== Devinette =====");
