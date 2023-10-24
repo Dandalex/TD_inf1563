@@ -74,6 +74,7 @@ public class Devinette {
 		    			System.out.println("Felicitations, vous avez mieux fait que moi! Vous avez gagné!");
 		    		}
 		    	}
+				scan.close();
 	}
 
 }

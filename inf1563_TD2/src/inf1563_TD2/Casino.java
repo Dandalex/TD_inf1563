@@ -171,8 +171,9 @@ public class Casino {
 			    System.out.println("Vous aurez gagné " +nombreSucces+" fois, et perdu "+ nombreEchec+ " fois."); // à la fin de tout
 			    System.out.printf(" Pourcentage chances de gagné: %.1f %% et %.1f %% de perdre.", probabiliteVictoire, probabilitePerdre);
 				
+				scan.close();
 				
 
 	}
-
+	
 }

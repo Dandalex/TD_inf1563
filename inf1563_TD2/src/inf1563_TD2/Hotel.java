@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Hotel {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 				 // créer l'objet Scanner
 			    Scanner clavier = new Scanner(System.in);
@@ -64,7 +63,7 @@ public class Hotel {
 					
 			    System.out.println("Le nombre de tables sera " + nbTables);
 			    System.out.println("Votre réception coutera $"+estimation+".");  
-				
+				clavier.close();
 				
 	}
 
