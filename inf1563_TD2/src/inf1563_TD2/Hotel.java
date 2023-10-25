@@ -13,38 +13,37 @@ public class Hotel {
 			    System.out.println("Entrez le nombre d'invités:");
 			    // méthode pour lire un int au clavier
 			    int invites = clavier.nextInt();
-
-			    double estimation;
+				boolean membre = false;
 			    double locationSalle = 0;
 			    int choixSalle=0;
+
 				System.out.println("Entrer votre numero de membre Elite Gold Member Supreme:"
 			    	+ "\n"
 			    	+ "(entrer 0 si vous n'êtes pas membre.)");
 					int numeroMembre = clavier.nextInt();
+					if (numeroMembre >0){
+						membre = true;
+					}
 
-				locationSalle = coutReception (invites, choixSalle, numeroMembre);
-				double locationSalleGrande = coutReception (invites, 1, numeroMembre);
-				if (invites < 50 ) {
+				locationSalle = coutReception (invites, choixSalle, membre);
+				double locationSalleGrande = coutReception (invites, 1, membre);
+				if ((invites < 50) && (locationSalle != locationSalleGrande)) {
 					System.out.println("Vous pouvez avoir accès à la grande salle même si vous êtes moins que 50 invitées.");
-					System.out.println("Présentement le cout serait de $"+locationSalle+".\n"+
-					"Le cout dans la grande salle serait $"+locationSalleGrande+".\n"+
-					"Cela vous intérèsse? Oui [1] ou Non[0]");
+					System.out.printf("Présentement le cout serait de $ %.2f.\n"+
+					"Le cout dans la grande salle serait $%.2f.\n"+
+					"Cela vous intérèsse? Oui [1] ou Non[0]", locationSalle, locationSalleGrande);
 					choixSalle = clavier.nextInt();
 				}
-
-				locationSalle = coutReception (invites, choixSalle, numeroMembre);
-			    estimation = locationSalle;
+				locationSalle = coutReception (invites, choixSalle, membre);
 					
 				int nbTables = nombreTables(invites);
 			    System.out.println("Le nombre de tables sera " + nbTables);
-			    System.out.println("Votre réception coutera $"+estimation+".");  
+			    System.out.printf("Votre réception coutera $%.2f.",locationSalle);  
 				clavier.close();
 				
 	}
 
-
-
-		public static double coutReception (int invites, int choixSalle, int numeroMembre){
+		public static double coutReception (int invites, int choixSalle, boolean membre){
 			double locationSalle;
 			if (invites < 50) {
 			    locationSalle = 300;
@@ -57,7 +56,7 @@ public class Hotel {
 			if (choixSalle == 1) {
 						locationSalle = locationSalle + 200;
 
-			if (numeroMembre > 0) {
+			if (membre == true) {
 				System.out.println("Merci de votre fidelité");
 				if (locationSalle*0.90 > locationMobilier + 300) {
 					System.out.println("Vous vous qualifier pour un upgrade gratuit de salle!");
@@ -69,6 +68,7 @@ public class Hotel {
 				}
 			}			
 						}	
+
 		return locationSalle;
 		}
 
