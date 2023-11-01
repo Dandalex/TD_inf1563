@@ -6,6 +6,20 @@ public class Recursivite {
 		construireRegle(10,3);
 	}
 	
+	public static int sommeDesChiffres (int n) {
+		int somme=0;
+		
+		
+		return somme;
+	}
+	public static int somme1(int n) {
+		int somme;
+		somme 
+		
+		
+		return somme;
+	}
+	
 	public static void construireRegle (int l, int n){
 		for (int i =0;i<l; i++) {
 		System.out.println("-----"+i+"-----");
