@@ -3,9 +3,21 @@ package inf1563_TD2;
 public class Recursivite {
 
 	public static void main(String[] args) {
-		int n= sommeDesChiffres(4959);
+		int n= sommeTotale(213455);
 		System.out.println(n);
 	}
+	
+	public static int sommeTotale(int n) {
+		if (n<10) {
+			return n;
+		}
+		else {
+		int somme= sommeTotale (sommeDesChiffres(n));
+		return somme;
+		}
+	}
+	
+	
 	
 	public static int sommeDesChiffres (int n) {
 		
@@ -30,15 +42,22 @@ public class Recursivite {
 	
 	public static int somme2(int n) {
 		int somme1 = somme1(n);
-		int somme2 = n/10%10;
+		int somme2 = somme1(n/10);
 		int somme= somme1+somme2;
 		return somme;
 	}
 	
 	public static int somme3(int n) {
 		int somme1= somme2(n);
-		int somme3= n/100%10;
+		int somme3= somme1(n/100);
 		int somme= somme1+somme3;
+		return somme;
+	}
+	
+	public static int somme4(int n) {
+		int somme1 = somme3 (n);
+		int somme2 = somme1(n/1000);
+		int somme = somme1+somme2;
 		return somme;
 	}
 	
