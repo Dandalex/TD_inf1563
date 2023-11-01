@@ -3,20 +3,42 @@ package inf1563_TD2;
 public class Recursivite {
 
 	public static void main(String[] args) {
-		construireRegle(10,3);
+		int n= sommeDesChiffres(4959);
+		System.out.println(n);
 	}
 	
 	public static int sommeDesChiffres (int n) {
+		
+		// a comprendre j<ai un peu fait n'importe quoi
 		int somme=0;
+		if (n/10==0) {
+			somme=n%10;
+			return somme;
+		}
+		else {
+			somme= sommeDesChiffres(n%10) + sommeDesChiffres(n/10);
+		}
 		
 		
 		return somme;
 	}
 	public static int somme1(int n) {
 		int somme;
-		somme 
-		
-		
+		somme = n%10;
+		return somme;
+	}
+	
+	public static int somme2(int n) {
+		int somme1 = somme1(n);
+		int somme2 = n/10%10;
+		int somme= somme1+somme2;
+		return somme;
+	}
+	
+	public static int somme3(int n) {
+		int somme1= somme2(n);
+		int somme3= n/100%10;
+		int somme= somme1+somme3;
 		return somme;
 	}
 	
