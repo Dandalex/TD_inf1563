@@ -15,6 +15,10 @@ public class Destination {
 		return distance;
 	}
 
+	public String getNom() {
+		return nom;
+	}
+
 	@Override
 	public String toString() {
 		return "Destination [nom=" + nom + " a distance=" + distance + " km ]";
